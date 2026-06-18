@@ -1,0 +1,5 @@
+# dev profile — DbAuthenticationProvider active, permissive CORS, verbose logging
+logging:
+  level:
+    com.example.employeesearch: DEBUG
+    com.example.employeesearch.audit: INFO

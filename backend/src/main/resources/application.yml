@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: employeesearch-api
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+  datasource:
+    url: jdbc:sqlite:${DB_PATH:./employeesearch.db}
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    hibernate:
+      ddl-auto: validate            # C1 — never create/update against the real DB
+      naming:
+        # Preserve exact DB casing from @Table/@Column (Users, Employees, Id, Name, ...).
+        # Spring Boot's default strategy lowercases identifiers and breaks validate (C1).
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    open-in-view: false
+    properties:
+      hibernate.dialect: org.hibernate.community.dialect.SQLiteDialect
+
+server:
+  port: ${SERVER_PORT:8080}
+
+app:
+  jwt:
+    # Dev default secret ONLY for local runs; inject JWT_SECRET in real environments (no secrets in source).
+    secret: ${JWT_SECRET:dev-only-insecure-secret-change-me-0123456789-0123456789}
+    expiry-minutes: ${JWT_EXPIRY:60}
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:4200}

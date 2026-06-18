@@ -1,0 +1,106 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f3f4f6;
+}
+
+/* Zone 1 — Header */
+.header {
+  background: #1b2a4a;
+  color: #fff;
+  padding: 0 20px;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user {
+  color: #93c5fd;
+  font-size: 13px;
+}
+
+.btn-export {
+  background: #217346;
+  color: #fff;
+}
+
+.btn-logout {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+/* Zone 2 — Filters */
+.filters {
+  background: #fff;
+  padding: 14px 20px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.filters-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.f-name {
+  flex: 1 1 320px;
+}
+
+.f-select {
+  width: 170px;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 8px;
+  padding-bottom: 18px;
+}
+
+/* Zone 3 — Results grid */
+.grid {
+  flex: 1;
+  overflow: auto;
+  padding: 12px 20px;
+}
+
+.emp-table {
+  width: 100%;
+  background: #fff;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Zone 4 — Status bar */
+.status-bar {
+  background: #e5e7eb;
+  color: #374151;
+  padding: 8px 20px;
+  font-size: 13px;
+}

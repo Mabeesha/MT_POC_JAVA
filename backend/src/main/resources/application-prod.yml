@@ -1,0 +1,4 @@
+# prod profile — AdAuthenticationProvider (TODO AD), strict CORS, INFO logging
+logging:
+  level:
+    com.example.employeesearch: INFO
